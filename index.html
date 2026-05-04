@@ -23,17 +23,10 @@
   }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
+body { font-family: var(–sans); background: var(–white); color: var(–ink); overflow-x: hidden; }
 
-body {
-font-family: var(–sans);
-background: var(–white);
-color: var(–ink);
-overflow-x: hidden;
-}
-
-/* ── NAV ────────────────────────────────────────────────── */
+/* NAV */
 nav {
 position: fixed; top: 0; left: 0; right: 0; z-index: 100;
 display: flex; align-items: center; justify-content: space-between;
@@ -42,131 +35,41 @@ background: rgba(255,253,249,0.88);
 backdrop-filter: blur(16px);
 border-bottom: 1px solid rgba(184,150,90,0.15);
 }
-.nav-logo {
-font-family: var(–serif); font-size: 22px; font-weight: 600;
-color: var(–ink); letter-spacing: 2px; text-decoration: none;
-}
+.nav-logo { font-family: var(–serif); font-size: 22px; font-weight: 600; color: var(–ink); letter-spacing: 2px; text-decoration: none; }
 .nav-logo span { color: var(–gold); }
-.nav-tag {
-font-size: 10px; letter-spacing: 3px; color: var(–muted);
-text-transform: uppercase; font-weight: 400;
-}
-.nav-cta {
-background: var(–ink); color: var(–pearl);
-padding: 10px 24px; border-radius: 2px;
-font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-text-decoration: none; font-weight: 500;
-transition: background 0.2s, color 0.2s;
-}
+.nav-tag { font-size: 10px; letter-spacing: 3px; color: var(–muted); text-transform: uppercase; font-weight: 400; }
+.nav-cta { background: var(–ink); color: var(–pearl); padding: 10px 24px; border-radius: 2px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: background 0.2s, color 0.2s; }
 .nav-cta:hover { background: var(–gold); color: var(–white); }
 
-/* ── HERO ───────────────────────────────────────────────── */
-.hero {
-min-height: 100vh;
-display: grid;
-grid-template-columns: 1fr 1fr;
-position: relative;
-overflow: hidden;
-}
-.hero-left {
-display: flex; flex-direction: column; justify-content: center;
-padding: 120px 64px 80px;
-position: relative; z-index: 2;
-}
-.hero-eyebrow {
-font-size: 10px; letter-spacing: 4px; color: var(–gold);
-text-transform: uppercase; margin-bottom: 24px;
-display: flex; align-items: center; gap: 12px;
-}
-.hero-eyebrow::before {
-content: ‘’; display: block;
-width: 32px; height: 1px; background: var(–gold);
-}
-.hero-title {
-font-family: var(–serif); font-size: clamp(52px, 6vw, 82px);
-font-weight: 300; line-height: 1.05; color: var(–ink);
-margin-bottom: 12px;
-}
-.hero-title em {
-font-style: italic; color: var(–teal);
-}
-.hero-title strong {
-font-weight: 600; display: block;
-}
-.hero-sub {
-font-size: 15px; color: var(–muted); line-height: 1.7;
-max-width: 420px; margin: 24px 0 40px;
-font-weight: 300;
-}
+/* HERO */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 120px 64px 80px; position: relative; z-index: 2; }
+.hero-eyebrow { font-size: 10px; letter-spacing: 4px; color: var(–gold); text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+.hero-eyebrow::before { content: ‘’; display: block; width: 32px; height: 1px; background: var(–gold); }
+.hero-title { font-family: var(–serif); font-size: clamp(52px, 6vw, 82px); font-weight: 300; line-height: 1.05; color: var(–ink); margin-bottom: 12px; }
+.hero-title em { font-style: italic; color: var(–teal); }
+.hero-title strong { font-weight: 600; display: block; }
+.hero-sub { font-size: 15px; color: var(–muted); line-height: 1.7; max-width: 420px; margin: 24px 0 40px; font-weight: 300; }
 .hero-sub b { color: var(–ink); font-weight: 500; }
 .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-.btn-primary {
-background: var(–teal); color: white;
-padding: 16px 36px; border-radius: 2px;
-font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
-text-decoration: none; font-weight: 500;
-transition: background 0.2s, transform 0.2s;
-}
+.btn-primary { background: var(–teal); color: white; padding: 16px 36px; border-radius: 2px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: background 0.2s, transform 0.2s; }
 .btn-primary:hover { background: var(–teal2); transform: translateY(-1px); }
-.btn-ghost {
-border: 1px solid var(–ink2); color: var(–ink2);
-padding: 16px 36px; border-radius: 2px;
-font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
-text-decoration: none; font-weight: 500;
-transition: all 0.2s;
-}
+.btn-ghost { border: 1px solid var(–ink2); color: var(–ink2); padding: 16px 36px; border-radius: 2px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: all 0.2s; }
 .btn-ghost:hover { background: var(–ink); color: var(–pearl); }
-
-.hero-stats {
-display: flex; gap: 40px; margin-top: 56px;
-padding-top: 40px; border-top: 1px solid var(–pearl2);
-}
-.stat-num {
-font-family: var(–serif); font-size: 36px; font-weight: 600;
-color: var(–teal); line-height: 1;
-}
+.hero-stats { display: flex; gap: 40px; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(–pearl2); }
+.stat-num { font-family: var(–serif); font-size: 36px; font-weight: 600; color: var(–teal); line-height: 1; }
 .stat-label { font-size: 11px; color: var(–muted); margin-top: 4px; letter-spacing: 0.5px; }
 
-/* Hero right — chat demo */
-.hero-right {
-background: var(–ink);
-display: flex; align-items: center; justify-content: center;
-padding: 100px 48px 60px;
-position: relative; overflow: hidden;
-}
-.hero-right::before {
-content: ‘PERLA’;
-position: absolute; font-family: var(–serif);
-font-size: 260px; font-weight: 600; color: rgba(255,255,255,0.025);
-letter-spacing: 20px; right: -60px; top: 50%; transform: translateY(-50%);
-white-space: nowrap; pointer-events: none;
-}
-.chat-window {
-width: 100%; max-width: 360px;
-background: #1A1814; border-radius: 16px;
-overflow: hidden; position: relative; z-index: 1;
-box-shadow: 0 40px 80px rgba(0,0,0,0.5);
-}
-.chat-header {
-background: var(–teal); padding: 16px 20px;
-display: flex; align-items: center; gap: 12px;
-}
-.chat-avatar {
-width: 36px; height: 36px; border-radius: 50%;
-background: rgba(255,255,255,0.2);
-display: flex; align-items: center; justify-content: center;
-font-family: var(–serif); font-size: 16px; color: white; font-weight: 600;
-}
+/* Hero right */
+.hero-right { background: var(–ink); display: flex; align-items: center; justify-content: center; padding: 100px 48px 60px; position: relative; overflow: hidden; }
+.hero-right::before { content: ‘PERLA’; position: absolute; font-family: var(–serif); font-size: 260px; font-weight: 600; color: rgba(255,255,255,0.025); letter-spacing: 20px; right: -60px; top: 50%; transform: translateY(-50%); white-space: nowrap; pointer-events: none; }
+.chat-window { width: 100%; max-width: 360px; background: #1A1814; border-radius: 16px; overflow: hidden; position: relative; z-index: 1; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
+.chat-header { background: var(–teal); padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+.chat-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-family: var(–serif); font-size: 16px; color: white; font-weight: 600; }
 .chat-name { color: white; font-size: 14px; font-weight: 500; }
 .chat-status { color: rgba(255,255,255,0.7); font-size: 11px; margin-top: 1px; }
-.chat-dot {
-width: 7px; height: 7px; border-radius: 50%;
-background: #4ade80; display: inline-block; margin-right: 5px;
-animation: pulse 2s infinite;
-}
-@keyframes pulse {
-0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.2)}
-}
+.chat-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; display: inline-block; margin-right: 5px; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.2)} }
 .chat-body { padding: 20px 16px; display: flex; flex-direction: column; gap: 12px; }
 .msg { max-width: 80%; padding: 10px 14px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
 .msg.them { background: #2A2720; color: #D4CFC8; border-bottom-left-radius: 4px; align-self: flex-start; }
@@ -179,361 +82,144 @@ animation: pulse 2s infinite;
 .typing span:nth-child(3){ animation-delay:.4s }
 @keyframes type { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
 
-/* ── PROBLEM SECTION ─────────────────────────────────────── */
-.problems {
-background: var(–pearl);
-padding: 100px 64px;
-text-align: center;
-}
-.section-eyebrow {
-font-size: 10px; letter-spacing: 4px; color: var(–gold);
-text-transform: uppercase; margin-bottom: 16px;
-}
-.section-title {
-font-family: var(–serif); font-size: clamp(36px, 4vw, 54px);
-font-weight: 300; color: var(–ink); line-height: 1.15;
-max-width: 640px; margin: 0 auto 16px;
-}
+/* PROBLEMS */
+.problems { background: var(–pearl); padding: 100px 64px; text-align: center; }
+.section-eyebrow { font-size: 10px; letter-spacing: 4px; color: var(–gold); text-transform: uppercase; margin-bottom: 16px; }
+.section-title { font-family: var(–serif); font-size: clamp(36px, 4vw, 54px); font-weight: 300; color: var(–ink); line-height: 1.15; max-width: 640px; margin: 0 auto 16px; }
 .section-title em { font-style: italic; color: var(–teal); }
-.section-sub {
-font-size: 15px; color: var(–muted); max-width: 480px;
-margin: 0 auto 64px; line-height: 1.7; font-weight: 300;
-}
-.problem-grid {
-display: grid; grid-template-columns: repeat(3, 1fr);
-gap: 2px; max-width: 900px; margin: 0 auto;
-}
-.problem-card {
-background: var(–white); padding: 40px 32px;
-text-align: left; position: relative; overflow: hidden;
-transition: transform 0.2s;
-}
+.section-sub { font-size: 15px; color: var(–muted); max-width: 480px; margin: 0 auto 64px; line-height: 1.7; font-weight: 300; }
+.problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 900px; margin: 0 auto; }
+.problem-card { background: var(–white); padding: 40px 32px; text-align: left; position: relative; overflow: hidden; transition: transform 0.2s; }
 .problem-card:hover { transform: translateY(-4px); }
-.problem-card::after {
-content: ‘’; position: absolute; bottom: 0; left: 0; right: 0;
-height: 2px; background: var(–teal); transform: scaleX(0);
-transition: transform 0.3s; transform-origin: left;
-}
+.problem-card::after { content: ‘’; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(–teal); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
 .problem-card:hover::after { transform: scaleX(1); }
 .problem-icon { font-size: 28px; margin-bottom: 20px; }
 .problem-title { font-family: var(–serif); font-size: 22px; font-weight: 600; margin-bottom: 10px; }
 .problem-text { font-size: 14px; color: var(–muted); line-height: 1.6; font-weight: 300; }
 
-/* ── HOW IT WORKS ────────────────────────────────────────── */
-.how {
-padding: 100px 64px;
-max-width: 1100px; margin: 0 auto;
-}
+/* HOW IT WORKS */
+.how { padding: 100px 64px; max-width: 1100px; margin: 0 auto; }
 .how-header { text-align: center; margin-bottom: 72px; }
-.steps {
-display: grid; grid-template-columns: repeat(4, 1fr);
-gap: 40px; position: relative;
-}
-.steps::before {
-content: ‘’; position: absolute; top: 28px; left: 10%; right: 10%;
-height: 1px; background: linear-gradient(90deg, transparent, var(–pearl2), var(–pearl2), transparent);
-}
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; }
+.steps::before { content: ‘’; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, var(–pearl2), var(–pearl2), transparent); }
 .step { text-align: center; position: relative; }
-.step-num {
-width: 56px; height: 56px; border-radius: 50%;
-background: var(–teal); color: white;
-font-family: var(–serif); font-size: 22px; font-weight: 600;
-display: flex; align-items: center; justify-content: center;
-margin: 0 auto 20px; position: relative; z-index: 1;
-}
+.step-num { width: 56px; height: 56px; border-radius: 50%; background: var(–teal); color: white; font-family: var(–serif); font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 1; }
 .step-title { font-family: var(–serif); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
 .step-text { font-size: 13px; color: var(–muted); line-height: 1.6; font-weight: 300; }
 
-/* ── FEATURES ────────────────────────────────────────────── */
-.features {
-background: var(–ink);
-padding: 100px 64px;
-color: var(–pearl);
-}
+/* FEATURES */
+.features { background: var(–ink); padding: 100px 64px; color: var(–pearl); }
 .features-inner { max-width: 1100px; margin: 0 auto; }
 .features .section-eyebrow { color: var(–gold2); }
 .features .section-title { color: var(–pearl); }
 .features .section-sub { color: #6E6A62; }
-.features-grid {
-display: grid; grid-template-columns: repeat(3, 1fr);
-gap: 1px; background: #2A2720; margin-top: 64px;
-}
-.feature-item {
-background: var(–ink2); padding: 40px 32px;
-transition: background 0.2s;
-}
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #2A2720; margin-top: 64px; }
+.feature-item { background: var(–ink2); padding: 40px 32px; transition: background 0.2s; }
 .feature-item:hover { background: #211F1C; }
-.feature-tag {
-font-size: 9px; letter-spacing: 3px; color: var(–teal2);
-text-transform: uppercase; margin-bottom: 16px;
-}
-.feature-title {
-font-family: var(–serif); font-size: 22px; font-weight: 600;
-color: var(–pearl); margin-bottom: 12px; line-height: 1.2;
-}
+.feature-tag { font-size: 9px; letter-spacing: 3px; color: var(–teal2); text-transform: uppercase; margin-bottom: 16px; }
+.feature-title { font-family: var(–serif); font-size: 22px; font-weight: 600; color: var(–pearl); margin-bottom: 12px; line-height: 1.2; }
 .feature-text { font-size: 13px; color: #6E6A62; line-height: 1.7; font-weight: 300; }
 
-/* ── DEMO SECTION ────────────────────────────────────────── */
-.demo-section {
-padding: 100px 64px;
-background: var(–pearl);
-text-align: center;
-}
-.demo-box {
-max-width: 700px; margin: 48px auto 0;
-background: var(–ink);
-border-radius: 12px; overflow: hidden;
-box-shadow: 0 32px 64px rgba(0,0,0,0.15);
-}
-.demo-bar {
-background: #1A1814; padding: 12px 20px;
-display: flex; align-items: center; gap: 8px;
-}
+/* DEMO */
+.demo-section { padding: 100px 64px; background: var(–pearl); text-align: center; }
+.demo-box { max-width: 700px; margin: 48px auto 0; background: var(–ink); border-radius: 12px; overflow: hidden; box-shadow: 0 32px 64px rgba(0,0,0,0.15); }
+.demo-bar { background: #1A1814; padding: 12px 20px; display: flex; align-items: center; gap: 8px; }
 .demo-dot { width: 10px; height: 10px; border-radius: 50%; }
-.demo-url {
-flex: 1; background: #2A2720; border-radius: 4px;
-padding: 4px 12px; font-size: 11px; color: #6E6A62;
-font-family: monospace; text-align: center;
-}
+.demo-url { flex: 1; background: #2A2720; border-radius: 4px; padding: 4px 12px; font-size: 11px; color: #6E6A62; font-family: monospace; text-align: center; }
 .demo-chat { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
 .demo-msg { max-width: 75%; padding: 12px 16px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
 .demo-msg.user { background: #2A2720; color: #C8C4BC; border-bottom-left-radius: 4px; align-self: flex-start; }
 .demo-msg.ai { background: var(–teal); color: white; border-bottom-right-radius: 4px; align-self: flex-end; }
 
-/* ── NICHES ──────────────────────────────────────────────── */
-.niches {
-padding: 100px 64px;
-text-align: center;
-}
-.niche-grid {
-display: flex; gap: 12px; flex-wrap: wrap;
-justify-content: center; margin-top: 48px; max-width: 800px; margin-left: auto; margin-right: auto;
-}
-.niche-pill {
-padding: 12px 24px; border: 1px solid var(–pearl2);
-border-radius: 100px; font-size: 13px; color: var(–muted);
-font-weight: 400; transition: all 0.2s; cursor: default;
-}
-.niche-pill:hover, .niche-pill.active {
-background: var(–teal); border-color: var(–teal);
-color: white;
-}
+/* NICHES */
+.niches { padding: 100px 64px; text-align: center; }
+.niche-grid { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 48px; max-width: 800px; margin-left: auto; margin-right: auto; }
+.niche-pill { padding: 12px 24px; border: 1px solid var(–pearl2); border-radius: 100px; font-size: 13px; color: var(–muted); font-weight: 400; transition: all 0.2s; cursor: default; }
+.niche-pill:hover, .niche-pill.active { background: var(–teal); border-color: var(–teal); color: white; }
 .niche-pill.active { font-weight: 500; }
-.niche-note {
-margin-top: 32px; font-size: 14px; color: var(–muted);
-font-style: italic; font-family: var(–serif); font-size: 18px;
-}
+.niche-note { margin-top: 32px; font-size: 18px; color: var(–muted); font-style: italic; font-family: var(–serif); }
 
-/* ── LEAD FORM ───────────────────────────────────────────── */
-.lead {
-background: var(–teal);
-padding: 100px 64px;
-text-align: center;
-color: white;
-position: relative; overflow: hidden;
-}
-.lead::before {
-content: ‘PERLA’;
-position: absolute; font-family: var(–serif);
-font-size: 300px; font-weight: 600;
-color: rgba(255,255,255,0.04); letter-spacing: 20px;
-left: 50%; top: 50%; transform: translate(-50%, -50%);
-white-space: nowrap; pointer-events: none;
-}
+/* LEAD FORM */
+.lead { background: var(–teal); padding: 100px 64px; text-align: center; color: white; position: relative; overflow: hidden; }
+.lead::before { content: ‘PERLA’; position: absolute; font-family: var(–serif); font-size: 300px; font-weight: 600; color: rgba(255,255,255,0.04); letter-spacing: 20px; left: 50%; top: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; }
 .lead .section-title { color: white; }
 .lead .section-sub { color: rgba(255,255,255,0.7); }
-.lead-form {
-display: grid; grid-template-columns: 1fr 1fr;
-gap: 16px; max-width: 560px; margin: 48px auto 0;
-position: relative; z-index: 1;
-}
-.lead-form input, .lead-form select {
-background: rgba(255,255,255,0.12);
-border: 1px solid rgba(255,255,255,0.25);
-color: white; padding: 14px 18px;
-border-radius: 4px; font-family: var(–sans);
-font-size: 14px; outline: none; transition: border 0.2s;
-width: 100%;
-}
+.lead-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 560px; margin: 48px auto 0; position: relative; z-index: 1; }
+.lead-form input, .lead-form select { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: white; padding: 14px 18px; border-radius: 4px; font-family: var(–sans); font-size: 14px; outline: none; transition: border 0.2s; width: 100%; }
 .lead-form input::placeholder { color: rgba(255,255,255,0.5); }
 .lead-form input:focus, .lead-form select:focus { border-color: rgba(255,255,255,0.6); }
 .lead-form select option { background: var(–teal2); color: white; }
 .lead-form .full { grid-column: 1 / -1; }
-.lead-submit {
-grid-column: 1 / -1;
-background: white; color: var(–teal);
-padding: 16px; border-radius: 4px;
-font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
-font-weight: 600; border: none; cursor: pointer;
-transition: all 0.2s; font-family: var(–sans);
-}
+.lead-submit { grid-column: 1 / -1; background: white; color: var(–teal); padding: 16px; border-radius: 4px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s; font-family: var(–sans); }
 .lead-submit:hover { background: var(–pearl); transform: translateY(-1px); }
-.lead-note {
-font-size: 12px; color: rgba(255,255,255,0.5);
-margin-top: 16px; position: relative; z-index: 1;
-}
+.lead-note { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 16px; position: relative; z-index: 1; }
 
-/* ── FOOTER ──────────────────────────────────────────────── */
-footer {
-background: var(–ink); color: #4A4640;
-padding: 40px 64px;
-display: flex; align-items: center; justify-content: space-between;
-flex-wrap: wrap; gap: 16px;
-}
-.footer-logo {
-font-family: var(–serif); font-size: 18px; color: #7A7268; letter-spacing: 2px;
-}
+/* FOOTER */
+footer { background: var(–ink); color: #4A4640; padding: 40px 64px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-logo { font-family: var(–serif); font-size: 18px; color: #7A7268; letter-spacing: 2px; }
 .footer-logo span { color: var(–gold); }
 .footer-by { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
 .footer-right { font-size: 11px; letter-spacing: 1px; text-align: right; }
 
-/* ── COMMAND CENTER ─────────────────────────────────────── */
-.command-center {
-padding: 100px 64px;
-background: var(–white);
-}
+/* COMMAND CENTER */
+.command-center { padding: 100px 64px; background: var(–white); }
 .cc-inner { max-width: 1200px; margin: 0 auto; }
-.cc-header {
-display: grid; grid-template-columns: 1fr 1fr;
-gap: 64px; align-items: end; margin-bottom: 64px;
-}
-.cc-available {
-display: inline-flex; align-items: center; gap: 10px;
-background: rgba(45,125,114,0.08);
-border: 1px solid rgba(45,125,114,0.2);
-border-radius: 100px; padding: 8px 18px;
-font-size: 11px; color: var(–teal); letter-spacing: 1px;
-margin-bottom: 20px; width: fit-content;
-}
-.cc-avail-dot {
-width: 7px; height: 7px; border-radius: 50%;
-background: var(–teal); animation: pulse 2s infinite;
-}
+.cc-header { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; margin-bottom: 64px; }
+.cc-available { display: inline-flex; align-items: center; gap: 10px; background: rgba(45,125,114,0.08); border: 1px solid rgba(45,125,114,0.2); border-radius: 100px; padding: 8px 18px; font-size: 11px; color: var(–teal); letter-spacing: 1px; margin-bottom: 20px; width: fit-content; }
+.cc-avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(–teal); animation: pulse 2s infinite; }
 .cc-feats { display: flex; flex-direction: column; gap: 14px; }
-.cc-feat {
-display: flex; gap: 12px; align-items: flex-start;
-font-size: 13px; color: var(–muted); line-height: 1.5; font-weight: 300;
-}
-.cc-feat-icon {
-width: 30px; height: 30px; border-radius: 6px;
-background: rgba(45,125,114,0.08);
-display: flex; align-items: center; justify-content: center;
-font-size: 15px; flex-shrink: 0;
-}
+.cc-feat { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: var(–muted); line-height: 1.5; font-weight: 300; }
+.cc-feat-icon { width: 30px; height: 30px; border-radius: 6px; background: rgba(45,125,114,0.08); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
 .cc-feat b { color: var(–ink); font-weight: 500; display: block; font-size: 13px; margin-bottom: 1px; }
 
 /* Dashboard mockup */
-.dash-mockup {
-background: #0C0F1A; border-radius: 14px; overflow: hidden;
-box-shadow: 0 40px 80px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.06);
-}
-.dash-topbar {
-background: #0F1220; padding: 11px 18px;
-display: flex; align-items: center; gap: 12px;
-border-bottom: 1px solid rgba(255,255,255,0.05);
-}
+.dash-mockup { background: #0C0F1A; border-radius: 14px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.06); }
+.dash-topbar { background: #0F1220; padding: 11px 18px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .dash-tb-dots { display: flex; gap: 6px; }
 .dash-tb-dot { width: 10px; height: 10px; border-radius: 50%; }
-.dash-tb-title {
-flex: 1; text-align: center;
-font-size: 10px; color: rgba(255,255,255,0.25); letter-spacing: 1px;
-}
-.live-badge {
-font-size: 9px; padding: 3px 10px; border-radius: 100px;
-background: rgba(58,189,126,0.12); color: #3ABD7E;
-border: 1px solid rgba(58,189,126,0.2); letter-spacing: 1px;
-display: flex; align-items: center; gap: 5px;
-}
+.dash-tb-title { flex: 1; text-align: center; font-size: 10px; color: rgba(255,255,255,0.25); letter-spacing: 1px; }
+.live-badge { font-size: 9px; padding: 3px 10px; border-radius: 100px; background: rgba(58,189,126,0.12); color: #3ABD7E; border: 1px solid rgba(58,189,126,0.2); letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
 .live-dot { width: 5px; height: 5px; border-radius: 50%; background: #3ABD7E; animation: pulse 2s infinite; }
 .dash-body { display: grid; grid-template-columns: 160px 1fr; }
-.dash-sidebar {
-background: #090C15; border-right: 1px solid rgba(255,255,255,0.04);
-padding: 14px 10px; display: flex; flex-direction: column; gap: 3px;
-}
-.dash-sb-logo {
-font-family: var(–serif); font-size: 14px; font-weight: 600;
-color: #ECE8E0; letter-spacing: 2px; padding: 4px 8px; margin-bottom: 12px;
-}
+.dash-sidebar { background: #090C15; border-right: 1px solid rgba(255,255,255,0.04); padding: 14px 10px; display: flex; flex-direction: column; gap: 3px; }
+.dash-sb-logo { font-family: var(–serif); font-size: 14px; font-weight: 600; color: #ECE8E0; letter-spacing: 2px; padding: 4px 8px; margin-bottom: 12px; }
 .dash-sb-logo span { color: #00C9B4; }
-.dash-nav {
-padding: 7px 10px; border-radius: 5px; font-size: 11px;
-color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 8px;
-}
-.dash-nav.active {
-background: rgba(0,168,150,0.1); color: #00C9B4;
-border: 1px solid rgba(0,168,150,0.18);
-}
-.dash-phase2 {
-margin-top: auto; background: rgba(244,162,97,0.08);
-border: 1px solid rgba(244,162,97,0.18); border-radius: 5px;
-padding: 9px; margin-top: 16px;
-}
+.dash-nav { padding: 7px 10px; border-radius: 5px; font-size: 11px; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 8px; }
+.dash-nav.active { background: rgba(0,168,150,0.1); color: #00C9B4; border: 1px solid rgba(0,168,150,0.18); }
+.dash-phase2 { margin-top: auto; background: rgba(244,162,97,0.08); border: 1px solid rgba(244,162,97,0.18); border-radius: 5px; padding: 9px; margin-top: 16px; }
 .dash-phase2-label { font-size: 8px; letter-spacing: 1px; color: #F4A261; text-transform: uppercase; margin-bottom: 4px; }
 .dash-phase2-text { font-size: 9px; color: rgba(255,255,255,0.35); line-height: 1.5; }
 .dash-content { padding: 14px; }
-.dash-alert {
-background: rgba(224,82,82,0.06); border: 1px solid rgba(224,82,82,0.18);
-border-radius: 6px; padding: 9px 13px;
-display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
-}
+.dash-alert { background: rgba(224,82,82,0.06); border: 1px solid rgba(224,82,82,0.18); border-radius: 6px; padding: 9px 13px; display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .dash-alert span { font-size: 10px; color: #E05252; flex: 1; }
-.dash-alert-cta {
-font-size: 8px; padding: 3px 9px; border-radius: 3px;
-background: rgba(244,162,97,0.12); color: #F4A261;
-border: 1px solid rgba(244,162,97,0.25); white-space: nowrap; letter-spacing: 1px;
-}
+.dash-alert-cta { font-size: 8px; padding: 3px 9px; border-radius: 3px; background: rgba(244,162,97,0.12); color: #F4A261; border: 1px solid rgba(244,162,97,0.25); white-space: nowrap; letter-spacing: 1px; }
 .dash-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-bottom: 12px; }
-.dash-stat {
-background: #101525; border: 1px solid rgba(255,255,255,0.05);
-border-radius: 6px; padding: 11px 12px;
-}
+.dash-stat { background: #101525; border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 11px 12px; }
 .dash-stat-lbl { font-size: 8px; color: rgba(255,255,255,0.28); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
 .dash-stat-val { font-family: var(–serif); font-size: 19px; font-weight: 600; line-height: 1; margin-bottom: 3px; }
 .dash-stat-sub { font-size: 8px; color: rgba(255,255,255,0.22); }
 .dash-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .dash-card { background: #101525; border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; overflow: hidden; }
-.dash-card-head {
-padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.04);
-font-size: 10px; color: rgba(255,255,255,0.5);
-display: flex; justify-content: space-between; align-items: center;
-}
-.dash-pill {
-font-size: 8px; padding: 2px 7px; border-radius: 3px;
-}
-.dash-apt-row {
-display: flex; align-items: center; gap: 7px;
-padding: 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.04);
-}
+.dash-card-head { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 10px; color: rgba(255,255,255,0.5); display: flex; justify-content: space-between; align-items: center; }
+.dash-pill { font-size: 8px; padding: 2px 7px; border-radius: 3px; }
+.dash-apt-row { display: flex; align-items: center; gap: 7px; padding: 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); }
 .dash-apt-row:last-child { border-bottom: none; }
-.dash-av {
-width: 20px; height: 20px; border-radius: 50%;
-background: rgba(0,168,150,0.12); color: #00C9B4;
-display: flex; align-items: center; justify-content: center;
-font-size: 6px; font-weight: 700; flex-shrink: 0;
-}
+.dash-av { width: 20px; height: 20px; border-radius: 50%; background: rgba(0,168,150,0.12); color: #00C9B4; display: flex; align-items: center; justify-content: center; font-size: 6px; font-weight: 700; flex-shrink: 0; }
 .dash-apt-name { flex: 1; font-size: 10px; color: rgba(255,255,255,0.6); }
 .dash-apt-time { font-size: 9px; color: rgba(255,255,255,0.22); }
-.dash-bars {
-padding: 12px; display: flex; align-items: flex-end;
-gap: 5px; height: 72px;
-}
+.dash-bars { padding: 12px; display: flex; align-items: flex-end; gap: 5px; height: 72px; }
 .dash-bar-g { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; }
 .dash-bar-r { width: 100%; border-radius: 2px 2px 0 0; }
 .dash-bar-lbl { font-size: 7px; color: rgba(255,255,255,0.2); }
 
-/* ── ANIMATIONS ──────────────────────────────────────────── */
-.fade-up {
-opacity: 0; transform: translateY(24px);
-animation: fadeUp 0.7s ease forwards;
-}
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.7s ease forwards; }
 .fade-up:nth-child(1){ animation-delay: 0.1s }
 .fade-up:nth-child(2){ animation-delay: 0.25s }
 .fade-up:nth-child(3){ animation-delay: 0.4s }
-@keyframes fadeUp {
-to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-/* ── RESPONSIVE ──────────────────────────────────────────── */
+/* RESPONSIVE */
 @media (max-width: 900px) {
 nav { padding: 16px 24px; }
 .nav-tag { display: none; }
@@ -597,7 +283,6 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
       </div>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="chat-window">
       <div class="chat-header">
@@ -608,34 +293,17 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
         </div>
       </div>
       <div class="chat-body">
-        <div class="msg them">
-          Magandang hapon po! May sakit yung bagang ko, pwede ba makapag-schedule ng appointment?
-        </div>
+        <div class="msg them">Magandang hapon po! May sakit yung bagang ko, pwede ba makapag-schedule ng appointment?</div>
         <div class="msg-time left">Patient · 2:34 PM</div>
-
-```
-    <div class="msg perla">
-      Magandang hapon din po! Siyempre, nandito po ako para tumulong. 😊 Para sa sakit ng ngipin/bagang, may available na slot kami bukas ng umaga (9AM) o makalawa ng hapon (3PM). Alin po ang mas okay sa inyo?
+        <div class="msg perla">Magandang hapon din po! Siyempre, nandito po ako para tumulong. 😊 Para sa sakit ng ngipin/bagang, may available na slot kami bukas ng umaga (9AM) o makalawa ng hapon (3PM). Alin po ang mas okay sa inyo?</div>
+        <div class="msg-time">PERLA · 2:34 PM</div>
+        <div class="msg them">Bukas ng 9am sana, para kay Dr. Santos</div>
+        <div class="msg-time left">Patient · 2:35 PM</div>
+        <div class="msg perla">Na-book na po kayo! Bukas, 9:00 AM kay Dr. Santos. 📅 May makakatanggap ng confirmation sa inyong number. Mayroon pa po ba kayong ibang katanungan?</div>
+        <div class="msg-time">PERLA · 2:35 PM</div>
+        <div class="typing"><span></span><span></span><span></span></div>
+      </div>
     </div>
-    <div class="msg-time">PERLA · 2:34 PM</div>
-
-    <div class="msg them">
-      Bukas ng 9am sana, para kay Dr. Santos
-    </div>
-    <div class="msg-time left">Patient · 2:35 PM</div>
-
-    <div class="msg perla">
-      Na-book na po kayo! Bukas, 9:00 AM kay Dr. Santos. 📅 May makakatanggap ng confirmation sa inyong number. Mayroon pa po ba kayong ibang katanungan?
-    </div>
-    <div class="msg-time">PERLA · 2:35 PM</div>
-
-    <div class="typing">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 
@@ -742,54 +410,29 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
 
 <section class="command-center" id="dashboard">
   <div class="cc-inner">
+    <div class="cc-header">
+      <div>
+        <div class="section-eyebrow">Available Now · Free 60 Days</div>
+        <h2 class="section-title" style="text-align:left;margin:0 0 16px">Your clinic's<br><em>command center.</em></h2>
+        <p style="font-size:15px;color:var(--muted);line-height:1.7;font-weight:300;max-width:440px">
+          While PERLA's call assistant is coming in Phase 2, your complete clinic management platform is ready today. Patient database, booking calendar, analytics, and reminders — all in one dashboard. Free for 60 days.
+        </p>
+      </div>
+      <div>
+        <div class="cc-available"><span class="cc-avail-dot"></span>Command Center — Ready Now</div>
+        <div class="cc-feats">
+          <div class="cc-feat"><div class="cc-feat-icon">👥</div><div><b>Patient CRM Database</b>Every patient auto-saved — name, contact, history, treatments. No manual encoding. Ever.</div></div>
+          <div class="cc-feat"><div class="cc-feat-icon">📅</div><div><b>Booking Calendar</b>Real-time appointments synced with Google Calendar. No double bookings. Your team always in sync.</div></div>
+          <div class="cc-feat"><div class="cc-feat-icon">📊</div><div><b>AI Clinic Analytics</b>Peak hours, busiest days, patient flow, revenue trends. Weekly digest every Monday morning.</div></div>
+          <div class="cc-feat"><div class="cc-feat-icon">🔔</div><div><b>Smart Reminders</b>Automatic SMS and Messenger reminders 24hrs and 2hrs before every appointment.</div></div>
+          <div class="cc-feat"><div class="cc-feat-icon">💰</div><div><b>Revenue Recovery Tracker</b>See exactly how much revenue PERLA recovered this month — made visible, not theoretical.</div></div>
+          <div class="cc-feat"><div class="cc-feat-icon">🧠</div><div><b>No-Show Intelligence</b>Repeat cancellers flagged automatically. Smarter reminder scheduling. Watch your no-show rate drop.</div></div>
+        </div>
+      </div>
+    </div>
 
 ```
-<!-- Header -->
-<div class="cc-header">
-  <div>
-    <div class="section-eyebrow">Available Now · Free 60 Days</div>
-    <h2 class="section-title" style="text-align:left;margin:0 0 16px">Your clinic's<br><em>command center.</em></h2>
-    <p style="font-size:15px;color:var(--muted);line-height:1.7;font-weight:300;max-width:440px">
-      While PERLA's call assistant is coming in Phase 2, your complete clinic management platform is ready today. Patient database, booking calendar, analytics, and reminders — all in one dashboard. Free for 60 days.
-    </p>
-  </div>
-  <div>
-    <div class="cc-available">
-      <span class="cc-avail-dot"></span>
-      Command Center — Ready Now
-    </div>
-    <div class="cc-feats">
-      <div class="cc-feat">
-        <div class="cc-feat-icon">👥</div>
-        <div><b>Patient CRM Database</b>Every patient auto-saved — name, contact, history, treatments. No manual encoding. Ever.</div>
-      </div>
-      <div class="cc-feat">
-        <div class="cc-feat-icon">📅</div>
-        <div><b>Booking Calendar</b>Real-time appointments synced with Google Calendar. No double bookings. Your team always in sync.</div>
-      </div>
-      <div class="cc-feat">
-        <div class="cc-feat-icon">📊</div>
-        <div><b>AI Clinic Analytics</b>Peak hours, busiest days, patient flow, revenue trends. Weekly digest every Monday morning.</div>
-      </div>
-      <div class="cc-feat">
-        <div class="cc-feat-icon">🔔</div>
-        <div><b>Smart Reminders</b>Automatic SMS and Messenger reminders 24hrs and 2hrs before every appointment. No-shows drop immediately.</div>
-      </div>
-      <div class="cc-feat">
-        <div class="cc-feat-icon">💰</div>
-        <div><b>Revenue Recovery Tracker</b>See exactly how much revenue PERLA recovered this month — made visible, not theoretical.</div>
-      </div>
-      <div class="cc-feat">
-        <div class="cc-feat-icon">🧠</div>
-        <div><b>No-Show Intelligence</b>Repeat cancellers flagged automatically. Smarter reminder scheduling. Watch your no-show rate drop.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Dashboard Mockup -->
 <div class="dash-mockup">
-  <!-- Top bar -->
   <div class="dash-topbar">
     <div class="dash-tb-dots">
       <div class="dash-tb-dot" style="background:#ff5f57"></div>
@@ -799,11 +442,7 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
     <div class="dash-tb-title">PERLA Command Center — Santos Dental Clinic</div>
     <div class="live-badge"><div class="live-dot"></div> Live Dashboard</div>
   </div>
-
-  <!-- Body -->
   <div class="dash-body">
-
-    <!-- Sidebar -->
     <div class="dash-sidebar">
       <div class="dash-sb-logo">PERLA<span>.</span></div>
       <div class="dash-nav active">⚡ Overview</div>
@@ -817,77 +456,27 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
         <div class="dash-phase2-text">AI Call Assistant coming. Founding clinics first.</div>
       </div>
     </div>
-
-    <!-- Main content -->
     <div class="dash-content">
-
-      <!-- Missed calls alert -->
       <div class="dash-alert">
         <span>📞 4 calls missed after hours last night — these patients may have booked elsewhere</span>
         <div class="dash-alert-cta">Activate PERLA Calls →</div>
       </div>
-
-      <!-- Stats -->
       <div class="dash-stats">
-        <div class="dash-stat">
-          <div class="dash-stat-lbl">👥 Patients Today</div>
-          <div class="dash-stat-val" style="color:#00C9B4">7</div>
-          <div class="dash-stat-sub">↑ 40% vs yesterday</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat-lbl">✅ Confirmed</div>
-          <div class="dash-stat-val" style="color:#3ABD7E">5</div>
-          <div class="dash-stat-sub">of 7 scheduled</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat-lbl">💰 Revenue Today</div>
-          <div class="dash-stat-val" style="color:#E8B84B">₱12.6K</div>
-          <div class="dash-stat-sub">↑ 22% this week</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat-lbl">⚠️ No-Shows</div>
-          <div class="dash-stat-val" style="color:#F4A261">1</div>
-          <div class="dash-stat-sub">flagged: repeat</div>
-        </div>
+        <div class="dash-stat"><div class="dash-stat-lbl">👥 Patients Today</div><div class="dash-stat-val" style="color:#00C9B4">7</div><div class="dash-stat-sub">↑ 40% vs yesterday</div></div>
+        <div class="dash-stat"><div class="dash-stat-lbl">✅ Confirmed</div><div class="dash-stat-val" style="color:#3ABD7E">5</div><div class="dash-stat-sub">of 7 scheduled</div></div>
+        <div class="dash-stat"><div class="dash-stat-lbl">💰 Revenue Today</div><div class="dash-stat-val" style="color:#E8B84B">₱12.6K</div><div class="dash-stat-sub">↑ 22% this week</div></div>
+        <div class="dash-stat"><div class="dash-stat-lbl">⚠️ No-Shows</div><div class="dash-stat-val" style="color:#F4A261">1</div><div class="dash-stat-sub">flagged: repeat</div></div>
       </div>
-
-      <!-- Two column -->
       <div class="dash-grid2">
-
-        <!-- Appointments -->
         <div class="dash-card">
-          <div class="dash-card-head">
-            Today's Appointments
-            <div class="dash-pill" style="background:rgba(58,189,126,0.1);color:#3ABD7E;border:1px solid rgba(58,189,126,0.2)">5 confirmed</div>
-          </div>
-          <div class="dash-apt-row">
-            <div class="dash-av">MR</div>
-            <div class="dash-apt-name">Maria Reyes — Prophylaxis</div>
-            <div class="dash-apt-time">9:00 AM</div>
-          </div>
-          <div class="dash-apt-row">
-            <div class="dash-av">JD</div>
-            <div class="dash-apt-name">Juan dela Cruz — Bunot</div>
-            <div class="dash-apt-time">10:00 AM</div>
-          </div>
-          <div class="dash-apt-row">
-            <div class="dash-av">AS</div>
-            <div class="dash-apt-name">Ana Santos — Pasta</div>
-            <div class="dash-apt-time">11:00 AM</div>
-          </div>
-          <div class="dash-apt-row" style="background:rgba(0,168,150,0.05)">
-            <div class="dash-av" style="background:rgba(0,168,150,0.2);border:1px solid rgba(0,168,150,0.4)">NP</div>
-            <div class="dash-apt-name" style="color:#00C9B4">New Patient — Bagang <span style="font-size:8px;background:rgba(0,168,150,0.15);padding:1px 5px;border-radius:2px;margin-left:4px">PERLA booked</span></div>
-            <div class="dash-apt-time">9:00 AM</div>
-          </div>
+          <div class="dash-card-head">Today's Appointments<div class="dash-pill" style="background:rgba(58,189,126,0.1);color:#3ABD7E;border:1px solid rgba(58,189,126,0.2)">5 confirmed</div></div>
+          <div class="dash-apt-row"><div class="dash-av">MR</div><div class="dash-apt-name">Maria Reyes — Prophylaxis</div><div class="dash-apt-time">9:00 AM</div></div>
+          <div class="dash-apt-row"><div class="dash-av">JD</div><div class="dash-apt-name">Juan dela Cruz — Bunot</div><div class="dash-apt-time">10:00 AM</div></div>
+          <div class="dash-apt-row"><div class="dash-av">AS</div><div class="dash-apt-name">Ana Santos — Pasta</div><div class="dash-apt-time">11:00 AM</div></div>
+          <div class="dash-apt-row" style="background:rgba(0,168,150,0.05)"><div class="dash-av" style="background:rgba(0,168,150,0.2);border:1px solid rgba(0,168,150,0.4)">NP</div><div class="dash-apt-name" style="color:#00C9B4">New Patient — Bagang <span style="font-size:8px;background:rgba(0,168,150,0.15);padding:1px 5px;border-radius:2px;margin-left:4px">PERLA booked</span></div><div class="dash-apt-time">9:00 AM</div></div>
         </div>
-
-        <!-- Revenue chart -->
         <div class="dash-card">
-          <div class="dash-card-head">
-            Weekly Revenue
-            <div class="dash-pill" style="background:rgba(232,184,75,0.1);color:#E8B84B;border:1px solid rgba(232,184,75,0.2)">↑ 18%</div>
-          </div>
+          <div class="dash-card-head">Weekly Revenue<div class="dash-pill" style="background:rgba(232,184,75,0.1);color:#E8B84B;border:1px solid rgba(232,184,75,0.2)">↑ 18%</div></div>
           <div class="dash-bars">
             <div class="dash-bar-g"><div class="dash-bar-r" style="height:45%;background:rgba(0,168,150,0.25)"></div><div class="dash-bar-lbl">Mon</div></div>
             <div class="dash-bar-g"><div class="dash-bar-r" style="height:60%;background:rgba(0,168,150,0.35)"></div><div class="dash-bar-lbl">Tue</div></div>
@@ -897,19 +486,10 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
             <div class="dash-bar-g"><div class="dash-bar-r" style="height:35%;background:rgba(0,168,150,0.2)"></div><div class="dash-bar-lbl">Sat</div></div>
             <div class="dash-bar-g"><div class="dash-bar-r" style="height:20%;background:rgba(0,168,150,0.15)"></div><div class="dash-bar-lbl">Sun</div></div>
           </div>
-          <!-- Revenue breakdown -->
           <div style="padding:0 12px 12px;display:flex;flex-direction:column;gap:6px">
-            <div style="display:flex;justify-content:space-between;font-size:9px">
-              <span style="color:rgba(255,255,255,0.35)">Collected</span>
-              <span style="color:#3ABD7E;font-weight:500">₱148,200</span>
-            </div>
-            <div style="height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
-              <div style="width:82%;height:100%;background:#3ABD7E;border-radius:2px"></div>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:9px">
-              <span style="color:rgba(255,255,255,0.35)">Recovered by PERLA</span>
-              <span style="color:#00C9B4;font-weight:500">₱12,400</span>
-            </div>
+            <div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,0.35)">Collected</span><span style="color:#3ABD7E;font-weight:500">₱148,200</span></div>
+            <div style="height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden"><div style="width:82%;height:100%;background:#3ABD7E;border-radius:2px"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,0.35)">Recovered by PERLA</span><span style="color:#00C9B4;font-weight:500">₱12,400</span></div>
           </div>
         </div>
       </div>
@@ -917,7 +497,6 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
   </div>
 </div>
 
-<!-- Free access CTA under dashboard -->
 <div style="text-align:center;margin-top:40px">
   <a href="#get-access" class="btn-primary">Start Your Free 60-Day Access</a>
   <p style="font-size:12px;color:var(--muted);margin-top:16px">No credit card required · 20 founding clinic slots · Rate locked forever</p>
@@ -1011,31 +590,28 @@ footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
 </footer>
 
 <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.lead-submit');
-    btn.textContent = '✓ You\'re on the list! We\'ll be in touch.';
-    btn.style.background = '#d4edda';
-    btn.style.color = '#1a6b2a';
-    btn.disabled = true;
-  }
-
-  // Intersection observer for scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.problem-card, .step, .feature-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.lead-submit');
+  btn.textContent = "✓ You're on the list! We'll be in touch.";
+  btn.style.background = '#d4edda';
+  btn.style.color = '#1a6b2a';
+  btn.disabled = true;
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
   });
+}, { threshold: 0.1 });
+document.querySelectorAll('.problem-card, .step, .feature-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
 </script>
 
 </body>
